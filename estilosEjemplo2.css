@@ -1,0 +1,47 @@
+*{/*selector universal, quita el margin y el padding de toda la pagina*/
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;/*ocupa el 100% de la pantaña del navegador*/
+}
+.grid-container{
+    display: grid;/*el display es como se muestra en el navegador, el grid es una forma de maquetacion para ordenar los elementos de la pagina*/
+    gap: 12px;/*es un espacio quen hay entre cada elemento interno de la clase grid-container*/
+    grid-template:/*trabaja en la dispocicion de los elementos, nececita de las areas para poder realizar la maquetacion*/
+    "header header header" 100px /*define la altura de la primera fila*/
+    "aside1 article aside3" auto /*auto se refiere que ocupe la toda la altura sobrante*/
+    "aside2 article aside4" auto
+    "footer footer footer" 100px/ 
+    /*con la barra inclinada "/" le damos a enterder que ahora trabajaremos con el tamaño de las columnas */
+    250px auto 250px
+    ;
+    .header{
+        grid-area: header;/*definimos el nombre de la area, puede tener cualquier nombre*/
+        background-color: aqua;
+    } 
+    .aside1{
+        grid-area: aside1;
+        background-color: blueviolet;
+    }
+    .aside2{
+        grid-area: aside2;
+        background-color:brown;
+    }
+    .article{
+        grid-area: article;
+        background-color: aquamarine;
+    }
+    .aside3{
+        grid-area: aside3;
+        background-color: brown;
+    }
+    .aside4{
+        grid-area: aside4;
+        background-color: blueviolet;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: cadetblue;
+    }
+}
